@@ -36,6 +36,9 @@ function showPropertiesReverse() {
 
 // showPropertiesReverse();
 
+
+
+
 //While
 
 function showPersonWhile() {
@@ -118,13 +121,13 @@ function mostrarArray(){
 
 //mostrarArray();
 
-
+// 
 function fromPersonToAgeArray(personasArray){
     var newPersonasArray = personasArray.map(function(element){
         var newObject = {};
         newObject.age = element.age;
         return newObject;
-    });
+    });;
     const personsFitered = newPersonasArray.filter(newPersonasArray => newPersonasArray.age <= 30)
     return personsFitered;
     
@@ -134,6 +137,45 @@ function mostrarAgeArray(){
     console.log( fromPersonToAgeArray(person));
 }
 
-mostrarAgeArray();
+// mostrarAgeArray();
 
 
+// getAges(persons) con map exclusivamente [30, 25, 12]
+// getOverMinAges(persons, minAge) [12, 25]
+
+// function getOverMinAgePersons(persons, minAge) {
+//   return persons.filter(function(age){
+//     return age(minAge) >=30 ;
+//   })
+
+// }
+
+
+// console.log(getOverMinAgePersons(person, age));
+
+
+
+
+
+
+// TODO: showPropertiesReversed() usando for incremental
+// for (var i = 0; i < person.length; i++) { ... } 
+
+function showPersonForReversed(){
+  for( var i = 0 ; i < person.length; i++){
+    person.reverse();
+    console.log(`hola soy ${person[i].name} y tengo ${person[i].age} años`);
+  }
+}
+
+// showPersonForReversed();
+
+
+// getOverMinAgePersons(persons, minAge) con filter en vez de foreach
+function getOverMinAgePersons(persons){
+  return persons.age >= 30;
+}
+
+var personsMinAge = person.filter(getOverMinAgePersons);
+
+console.log(personsMinAge);
