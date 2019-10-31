@@ -140,18 +140,35 @@ function mostrarAgeArray(){
 // mostrarAgeArray();
 
 
+
+
 // getAges(persons) con map exclusivamente [30, 25, 12]
+
+// var getAges = person.map(function(ages){
+//   var ageObj = ages.age;
+//   return ageObj;
+// });
+
+// console.log(getAges);
+
+// var foo = function(ages){
+//   var ageObj = ages.age;
+//   return ageObj;
+// };
+
+// var getAges = person.map(foo)
+
 // getOverMinAges(persons, minAge) [12, 25]
 
-// function getOverMinAgePersons(persons, minAge) {
-//   return persons.filter(function(age){
-//     return age(minAge) >=30 ;
-//   })
+function getOverMinAgePersons(persons, minAge) {
+  return persons.filter(function(person){
+    return person.age >= minAge ;
+  })
 
-// }
+}
 
 
-// console.log(getOverMinAgePersons(person, age));
+console.log(getOverMinAgePersons(person, 30));
 
 
 
@@ -163,8 +180,6 @@ function mostrarAgeArray(){
 
 function showPersonForReversed(){
   for( var i = 0 ; i < person.length; i++){
-    person.reverse();
-    console.log(`hola soy ${person[i].name} y tengo ${person[i].age} años`);
   }
 }
 
