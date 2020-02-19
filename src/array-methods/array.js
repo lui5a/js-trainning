@@ -1,12 +1,4 @@
-var person = [
-  { age: 38, name: "Pau" },
-  { age: 30, name: "Alice" },
-  { age: 31, name: "Jose" },
-  { age: 36, name: "Titu" },
-  { age: 23, name: "Javi" },
-  { age: 28, name: "Davi" },
-  { age: 26, name: "Marc" }
-];
+
 
 function showPerson() {
   for (var i = 0; i < person.length; i++) {
@@ -101,43 +93,40 @@ function addNewPersonData(personas, edad, nombre) {
 //////////////////////////////////////
 
 
-function getOverMinAge(personasArray, minAge) {
-    temporalArray=[];
-  personasArray.forEach(element => {
-    if (element.age >= minAge) {
-     temporalArray.push(element)
-    }
-  });
+// function getOverMinAge(personasArray, minAge) {
+//     temporalArray=[];
+//   personasArray.forEach(element => {
+//     if (element.age >= minAge) {
+//      temporalArray.push(element)
+//     }
+//   });
 
-  return temporalArray;
-}
+//   return temporalArray;
+// }
 
-// getOverMinAge(person,30);
+// // getOverMinAge(person,30);
 
-function mostrarArray(){
-    console.log(getOverMinAge(person,30));
-}
+// function mostrarArray(){
+//     console.log(getOverMinAge(person,30));
+// }
 
 
 //mostrarArray();
 
 // 
-function fromPersonToAgeArray(personasArray){
-    var newPersonasArray = personasArray.map(function(element){
-        var newObject = {};
-        newObject.age = element.age;
-        return newObject;
-    });;
-    const personsFitered = newPersonasArray.filter(newPersonasArray => newPersonasArray.age <= 30)
-    return personsFitered;
+// function fromPersonToAgeArray(personasArray){
+//     var newPersonasArray = personasArray.map(function(element){
+//         var newObject = {};
+//         newObject.age = element.age;
+//         return newObject;
+//     });
+
+//     const personsFitered = newPersonasArray.filter(newPersonasArray => newPersonasArray.age <= 30)
+//     return personsFitered;
     
-}
+// }
 
-function mostrarAgeArray(){
-    console.log( fromPersonToAgeArray(person));
-}
-
-// mostrarAgeArray();
+// console.log( fromPersonToAgeArray(person);
 
 
 
@@ -145,8 +134,7 @@ function mostrarAgeArray(){
 // getAges(persons) con map exclusivamente [30, 25, 12]
 
 // var getAges = person.map(function(ages){
-//   var ageObj = ages.age;
-//   return ageObj;
+//   return ages.age;
 // });
 
 // console.log(getAges);
@@ -160,15 +148,14 @@ function mostrarAgeArray(){
 
 // getOverMinAges(persons, minAge) [12, 25]
 
-function getOverMinAgePersons(persons, minAge) {
-  return persons.filter(function(person){
-    return person.age >= minAge ;
-  })
+// function getOverMinAgePersons(persons, minAge) {
+//   return persons.filter(function(person){
+//     return person.age >= minAge ;
+//   })
 
-}
+// }
 
-
-console.log(getOverMinAgePersons(person, 30));
+// console.log(getOverMinAgePersons(person, 30));
 
 
 
@@ -178,19 +165,49 @@ console.log(getOverMinAgePersons(person, 30));
 // TODO: showPropertiesReversed() usando for incremental
 // for (var i = 0; i < person.length; i++) { ... } 
 
-function showPersonForReversed(){
-  for( var i = 0 ; i < person.length; i++){
+var person = [
+  { age: 38, name: "Pau" },
+  { age: 30, name: "Alice" },
+  { age: 31, name: "Jose" },
+  { age: 36, name: "Titu" },
+  { age: 23, name: "Javi" },
+  { age: 28, name: "Davi" },
+  { age: 26, name: "Marc" }
+];
+
+function showPersonForReversed(x){
+  var counter = x.length - 1;
+  var tempArray = []
+  
+  for( var i = 0 ; i < x.length; i++){
+     tempArray[i] = x[counter--];
   }
+  
+  return tempArray;
 }
 
-// showPersonForReversed();
+// console.log(showPersonForReversed(person));
 
+
+function scope1(){
+ 
+  for( var i = 0 ; i < 7; i++){
+    
+  console.log( b= 6+6 );  
+  console.log('hola') 
+  
+  }
+  
+  return b ;
+}
+
+console.log(scope1())
 
 // getOverMinAgePersons(persons, minAge) con filter en vez de foreach
-function getOverMinAgePersons(persons){
-  return persons.age >= 30;
-}
+// function getOverMinAgePersons(persons){
+//   return persons.age >= 30;
+// }
 
-var personsMinAge = person.filter(getOverMinAgePersons);
+// var personsMinAge = person.filter(getOverMinAgePersons);
 
-console.log(personsMinAge);
+// console.log(personsMinAge);
