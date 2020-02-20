@@ -34,8 +34,75 @@
 //     console.log(output || n);
 //   }
 
-for(let hash = '#' ; hash.length <= 8; hash += '#'){
-    console.log(hash);
 
+let length = 8;
+let output = "";
+
+for(let counterRow = 0 ; counterRow < length ; counterRow++){
+    for(let item = 0 ; item < length ; item++){
+        if((counterRow + item) % 2 !== 0){
+            output += "#";
+        }else{
+            output += " ";
+        }
+    }
+    output += "\n";
 }
+console.log(output);
+
+
+//  let output = "";
+//  let charItem ="";
+//  let char= "#";
+//  let space = " ";
+
+// for(let counterRow = 0 ; counterRow <= 7 ; counterRow += 1){
+
+//     for(let item = 0 ; item < 8 ; item += 1){
+//         if(item % 2 == 0) charItem = space;
+//         if(item %2 !== 0) charItem = char;
+//         output +=  charItem;
+//     }
+
+//     output += "\n";
+// }
+// console.log(output);
+
+
+// let hash = "#";
+// let space = " ";
+// let output = "";
+// for(let couterGrid = 1 ; couterGrid <= 8; couterGrid += 1){
+//     even = space + hash;
+//     notEeven = hash + space;
+//     if(couterGrid == 1) output = even;
+//     if(couterGrid == 2) output = notEeven;
+//     if(couterGrid==2) output = hash + space;
+//     console.log('1', output)
+// }
+
+
+// let hash = "#";
+// let space = " ";
+// let output = "";
+// for(let couterGrid = 1 ; couterGrid <= 8; couterGrid += 1){
+//     output += space + hash;
+//     if(couterGrid == 1) output += output;
+//     if(couterGrid==2) output = hash + space;
+//     console.log('1', output)
+// }
+
+    // if(counter == 1) output += output + output + output;
+    // console.log('3', output)
+
+
+// if(counter == 1) output += output + output + output;
+//     console.log(output);
+//    let output = "";
+//     let blank = " "
+//     if( hash.length <= 1)
+//     blank += hash;
+//     if (hash.length <= 2)
+//     blank += hash ;
+//     console.log(output += blank + blank + blank );
 
