@@ -1,4 +1,12 @@
-
+////////
+// let result = 1;
+// let counter = 0;
+// while (counter < 10) {
+//     result = result * 2;
+//     counter = counter + 1;
+//     console.log(result);
+// }
+//////
 
 // console.log("This is the first line\nAnd this is the second")
 
@@ -7,6 +15,12 @@
 // while (hash.length <= 7) {
 //   console.log(hash);
 //   hash = hash + '#';
+// }
+
+// let hash = ""
+// for( counter = 1 ; counter <= 7; counter+=1 ){
+//     hash += "#";
+//     console.log(hash);
 // }
 
 // for(let number = 1; number<= 100; number += 1){
@@ -35,38 +49,38 @@
 //   }
 
 
-let length = 8;
-let output = "";
+// let length = 8;
+// let output = "";
 
-for(let counterRow = 0 ; counterRow < length ; counterRow++){
-    for(let item = 0 ; item < length ; item++){
-        if((counterRow + item) % 2 !== 0){
-            output += "#";
-        }else{
-            output += " ";
-        }
-    }
-    output += "\n";
-}
-console.log(output);
-
-
-//  let output = "";
-//  let charItem ="";
-//  let char= "#";
-//  let space = " ";
-
-// for(let counterRow = 0 ; counterRow <= 7 ; counterRow += 1){
-
-//     for(let item = 0 ; item < 8 ; item += 1){
-//         if(item % 2 == 0) charItem = space;
-//         if(item %2 !== 0) charItem = char;
-//         output +=  charItem;
+// for(let counterRow = 0 ; counterRow < length ; counterRow++){
+//     for(let item = 0 ; item < length ; item++){
+//         if((counterRow + item) % 2 !== 0){
+//             output += "#";
+//         }else{
+//             output += " ";
+//         }
 //     }
-
 //     output += "\n";
 // }
 // console.log(output);
+
+
+ let output = "";
+ let charItem ="";
+ let char= "#";
+ let space = " ";
+
+for(let counterRow = 0 ; counterRow <= 7 ; counterRow += 1){
+
+    for(let item = 0 ; item < 8 ; item += 1){
+        if(item % 2 == 0) charItem = space;
+        if(item %2 !== 0) charItem = char;
+        output +=  charItem;
+    }
+
+    output += "\n";
+}
+console.log(output);
 
 
 // let hash = "#";
