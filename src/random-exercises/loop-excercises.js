@@ -38,15 +38,29 @@ function generateRandomNumber(min, max){
         console.log('new number', number)
     }else{
         console.log('repeated number', number)
-        return;
+        return generateRandomNumber(min, max);
     }
-    return console.log('number push',number);
+}
+
+const limit = 10;
+const iterations = 10;
+
+function resetAllRandomNumbers(){
+    for (let it = 0; it < iterations; it++) {
+        generateRandomNumber(1,limit);
+        console.log(allRandomNumbers);
+    }
+    if(allRandomNumbers.length == limit){
+        console.log('reset', allRandomNumbers)
+        allRandomNumbers.length = 0;
+    } else{
+        console.log('no reset',allRandomNumbers)
+        allRandomNumbers;
+    }
+    console.log('result',allRandomNumbers)
 
 }
-generateRandomNumber(1,10);
-generateRandomNumber(1,10000);
-generateRandomNumber(1,3);
-
-console.log(allRandomNumbers);
+resetAllRandomNumbers();
+// console.log(allRandomNumbers);
 
 
